@@ -74,6 +74,28 @@ Open http://localhost:5173.
 pytest -q
 ```
 
+## Quick Smoke Test (Recommended)
+Run from the **repository root** (`AICoLab/`).
+
+### macOS/Linux (bash)
+```bash
+bash scripts/smoke_test.sh
+```
+
+### Windows (PowerShell)
+Open **PowerShell** in the repository root, then run:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\smoke_test.ps1
+```
+
+What it does:
+1. Creates/activates `.venv`
+2. Installs backend dependencies
+3. Runs `pytest -q`
+4. Starts backend
+5. Calls `/health`
+6. Calls `/v1/agent/respond` with `examples/sample_request.json`
+
 ## Docker
 ```bash
 docker compose up --build
