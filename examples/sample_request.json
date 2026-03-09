@@ -1,0 +1,8 @@
+{
+  "session_id": "demo-session",
+  "user_input": "I've had a sore throat and low fever for 2 days.",
+  "context": {
+    "age": "32",
+    "history": "seasonal allergies"
+  }
+}
