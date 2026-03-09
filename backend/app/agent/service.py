@@ -11,6 +11,23 @@ class HealthAgentService:
         self.memory = memory_store or SessionMemoryStore()
         self.llm = OpenAICompatibleClient()
 
+    @staticmethod
+    def _normalize_payload(payload: dict) -> dict:
+        """Best-effort normalization so partial LLM JSON never crashes API validation."""
+        normalized = dict(payload)
+        normalized.setdefault(
+            "user_friendly_answer",
+            "I can share general health information, but I need a bit more detail to provide tailored guidance.",
+        )
+        normalized.setdefault("summary", "General health guidance based on the provided input.")
+        normalized.setdefault("follow_up_questions", [])
+        normalized.setdefault("possible_considerations", [])
+        normalized.setdefault("urgency_level", UrgencyLevel.schedule_primary_care)
+        normalized.setdefault("red_flags_detected", [])
+        normalized.setdefault("self_care_guidance", [])
+        normalized.setdefault("when_to_seek_care", [])
+        return normalized
+
     async def handle(self, request: HealthRequest) -> tuple[HealthResponse, str | None]:
         user_safety = review_user_input(request.user_input)
         history = self.memory.get(request.session_id)
@@ -23,6 +40,7 @@ class HealthAgentService:
         messages.append({"role": "user", "content": request.user_input})
 
         raw_output, payload = await self.llm.generate_json(messages)
+        payload = self._normalize_payload(payload)
         payload["red_flags_detected"] = sorted(
             set(payload.get("red_flags_detected", []) + user_safety.red_flags_detected)
         )
