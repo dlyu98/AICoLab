@@ -1,0 +1,5 @@
+[
+  {"patient_id":"SYN-1001","display_name":"Synthetic Patient A","date_of_birth":"1948-03-14","sex":"female","problems":["Heart failure","Type 2 diabetes","Chronic kidney disease","Hypertension"],"preferred_language":"English"},
+  {"patient_id":"SYN-1002","display_name":"Synthetic Patient B","date_of_birth":"1975-09-22","sex":"male","problems":["Asthma","Major depressive disorder"],"preferred_language":"Spanish"},
+  {"patient_id":"SYN-1003","display_name":"Synthetic Patient C","date_of_birth":"1962-01-08","sex":"female","problems":["COPD","Hypertension","Anemia"],"preferred_language":"English"}
+]

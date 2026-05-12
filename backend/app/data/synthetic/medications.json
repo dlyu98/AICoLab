@@ -1,0 +1,10 @@
+[
+  {"patient_id":"SYN-1001","name":"Furosemide","status":"active","dose":"40 mg daily"},
+  {"patient_id":"SYN-1001","name":"Lisinopril","status":"active","dose":"10 mg daily"},
+  {"patient_id":"SYN-1001","name":"Metformin","status":"active","dose":"500 mg twice daily"},
+  {"patient_id":"SYN-1001","name":"Carvedilol","status":"active","dose":"12.5 mg twice daily"},
+  {"patient_id":"SYN-1001","name":"Atorvastatin","status":"active","dose":"40 mg nightly"},
+  {"patient_id":"SYN-1002","name":"Albuterol inhaler","status":"active","dose":"2 puffs as needed"},
+  {"patient_id":"SYN-1003","name":"Tiotropium","status":"active","dose":"18 mcg daily"},
+  {"patient_id":"SYN-1003","name":"Amlodipine","status":"active","dose":"5 mg daily"}
+]

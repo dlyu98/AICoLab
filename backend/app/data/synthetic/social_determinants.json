@@ -1,0 +1,6 @@
+[
+  {"patient_id":"SYN-1001","domain":"transportation","status":"barrier","detail":"Needs ride coordination for cardiology follow-up."},
+  {"patient_id":"SYN-1001","domain":"medication_affordability","status":"positive","detail":"Reports difficulty paying for one medication refill."},
+  {"patient_id":"SYN-1002","domain":"housing","status":"stable","detail":"No housing barrier in synthetic record."},
+  {"patient_id":"SYN-1003","domain":"transportation","status":"barrier","detail":"Missed pulmonary follow-up due to transportation limitations."}
+]

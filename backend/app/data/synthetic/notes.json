@@ -1,0 +1,5 @@
+[
+  {"patient_id":"SYN-1001","date":"2026-04-27","note_type":"discharge_summary","text":"Synthetic discharge note: heart failure symptoms improved after diuresis. Follow-up with cardiology and primary care recommended. Transportation assistance discussed."},
+  {"patient_id":"SYN-1002","date":"2026-04-02","note_type":"progress_note","text":"Synthetic visit note: asthma controlled with intermittent albuterol use. No emergency symptoms documented."},
+  {"patient_id":"SYN-1003","date":"2026-03-17","note_type":"discharge_summary","text":"Synthetic discharge note: COPD exacerbation treated. Follow-up pulmonary appointment requested; patient missed first follow-up."}
+]

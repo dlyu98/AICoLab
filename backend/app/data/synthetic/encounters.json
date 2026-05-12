@@ -1,0 +1,7 @@
+[
+  {"encounter_id":"ENC-1","patient_id":"SYN-1001","type":"inpatient","date":"2026-04-25","reason":"Heart failure exacerbation","disposition":"home with services","status":"completed"},
+  {"encounter_id":"ENC-2","patient_id":"SYN-1001","type":"emergency","date":"2026-03-08","reason":"Dyspnea and edema","disposition":"admitted","status":"completed"},
+  {"encounter_id":"ENC-3","patient_id":"SYN-1001","type":"emergency","date":"2026-02-01","reason":"Hyperglycemia","disposition":"home","status":"completed"},
+  {"encounter_id":"ENC-4","patient_id":"SYN-1002","type":"primary_care","date":"2026-04-02","reason":"Asthma follow-up","disposition":"home","status":"completed"},
+  {"encounter_id":"ENC-5","patient_id":"SYN-1003","type":"inpatient","date":"2026-03-15","reason":"COPD exacerbation","disposition":"skilled nursing recommended","status":"missed follow-up"}
+]
