@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+backend/app/data/audit_logs.jsonl
+frontend/node_modules/
+frontend/dist/
