@@ -1,6 +1,8 @@
 :root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #123; background: #eef7fb; }
 body { margin: 0; } main { max-width: 1180px; margin: auto; padding: 18px; }
 .banner { position: sticky; top: 0; z-index: 2; display: flex; gap: 10px; align-items: center; padding: 12px 16px; margin-bottom: 18px; border-radius: 14px; color: #073b4c; background: #d8f3dc; border: 1px solid #95d5b2; font-weight: 700; }
+.apiAlert { margin: 0 0 18px; padding: 14px 16px; border-radius: 16px; color: #7f1d1d; background: #fee2e2; border: 1px solid #fecaca; font-weight: 700; }.apiAlert span { display:block; margin-top:4px; color:#991b1b; font-weight:500; }
+button:disabled, select:disabled { opacity: .55; cursor: not-allowed; }
 .hero { display: flex; justify-content: space-between; gap: 24px; padding: 34px; border-radius: 28px; background: linear-gradient(135deg, #0f766e, #2563eb); color: white; box-shadow: 0 16px 40px #1d4ed833; }
 .hero h1 { font-size: clamp(2rem, 4vw, 4rem); margin: 0; letter-spacing: -0.05em; }.hero p { max-width: 820px; line-height: 1.6; }.eyebrow { text-transform: uppercase; letter-spacing: .18em; font-weight: 800; }.heroIcon { opacity: .85; flex: none; }
 .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }.top { grid-template-columns: 1.5fr .9fr; }

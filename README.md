@@ -58,6 +58,62 @@ npm run dev
 
 Open the frontend URL printed by Vite. The API defaults to `http://localhost:8000`.
 
+
+## Troubleshooting: patient selector is empty
+
+If the frontend loads but the synthetic patient dropdown is empty, the frontend usually cannot reach the backend API.
+
+1. Confirm you are in the repository root.
+
+   ```bash
+   pwd
+   ```
+
+   You should be in the folder that contains `README.md`, `backend/`, and `frontend/`.
+
+2. Start the backend from the repository root.
+
+   On macOS/Linux/Git Bash:
+
+   ```bash
+   source .venv/bin/activate
+   python -m uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000
+   ```
+
+   On Windows Git CMD:
+
+   ```cmd
+   .venv\Scripts\activate
+   py -m uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000
+   ```
+
+3. Open these URLs directly in your browser:
+
+   ```text
+   http://localhost:8000/health
+   http://localhost:8000/patients
+   ```
+
+   `/health` should return `"status":"ok"`, and `/patients` should return a JSON list with `SYN-1001`, `SYN-1002`, and `SYN-1003`.
+
+4. Start the frontend in a second terminal.
+
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+
+5. Open the frontend, usually `http://localhost:5173`, and click **Reload patients** if needed.
+
+6. If the frontend still cannot connect, create `frontend/.env.local` with:
+
+   ```text
+   VITE_API_BASE_URL=http://localhost:8000
+   ```
+
+   Then stop and restart `npm run dev`.
+
 ## Environment variables
 
 | Variable | Purpose |
